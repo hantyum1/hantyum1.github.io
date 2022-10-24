@@ -17,7 +17,7 @@ body {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.568);
-    border-radius: 12px;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
@@ -57,4 +57,103 @@ input{
   color: #e5e5e5;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 100;
+}
+
+.glass-button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-left: 40px;
+  margin-top: 20px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.1);
+  /* border: 1px solid rgba(255,255,255,0.1); */
+  backdrop-filter: blur(30px);
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.glass-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.card-image {
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1, #item-2, #item-3 {
+  visibility: hidden;
+}
+
+#item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+#item-2:checked ~ .player #test {
+  transform: translateY(0);
+}
+
+#item-2:checked ~ .player #test  {
+  transform: translateY(-40px);
+}
+
+#item-3:checked ~ .player #test  {
+  transform: translateY(-80px);
 }
