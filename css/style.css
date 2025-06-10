@@ -1,10 +1,11 @@
 body {
-    background-image: url("../assets/background.jpg");
+    background-color: #000;
+    background-image: url("../assets/tron1.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Orbitron', sans-serif;
     font-weight: 400;
-    color: white;
+    color: #00ffff;
 }
 
 /* effetto frosted glass card */
@@ -16,18 +17,18 @@ body {
     margin-top: 15%;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.568);
+    background-color: rgba(0, 50, 60, 0.6);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border: 1px solid #00ffff;
 }
 
 h1 {
-    font-family: 'JetBrains Mono', monospace;
-    color: white;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
     margin-left: 40px;
     margin-top: 30px;
     font-weight: 800;
-
+    text-shadow: 0 0 8px #00ffff;
 }
 
 label{
@@ -42,20 +43,20 @@ input{
   display: block;
   height: 30px;
   width: 300px;
-  background-color: rgba(255,255,255,0.07);
+  background-color: rgba(0,255,255,0.1);
   border-radius: 20px;
   padding: 0 10px;
   margin-top: 8px;
   margin-left: 40px;
   font-size: 14px;
   font-weight: 300;
-  border: none;
-  color: white;
+  border: 1px solid #00ffff;
+  color: #00ffff;
 }
 
 ::placeholder{
-  color: #e5e5e5;
-  font-family: 'JetBrains Mono', monospace;
+  color: #007777;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 100;
 }
 
@@ -64,22 +65,21 @@ input{
   padding: 12px 24px;
   margin-left: 40px;
   margin-top: 20px;
-  border: 0;
+  border: 1px solid #00ffff;
   text-decoration: none;
   border-radius: 20px;
-  background-color: rgba(255,255,255,0.1);
-  /* border: 1px solid rgba(255,255,255,0.1); */
+  background-color: rgba(0,255,255,0.1);
   backdrop-filter: blur(30px);
-  color: rgba(255,255,255,0.8);
+  color: #00ffff;
   font-size: 14px;
   letter-spacing: 2px;
   cursor: pointer;
   text-transform: uppercase;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .glass-button:hover {
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(0,255,255,0.2);
 }
 
 .card-image {
@@ -166,7 +166,7 @@ img {
   margin-top:2.5%;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.568);
+  background-color: rgba(0, 50, 60, 0.6);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid #00ffff;
 }
